@@ -29,6 +29,18 @@ const MOCK_POKEMON_LIST: PokemonListItem[] = [
     imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png',
     types: ['water'],
   },
+  {
+    id: 25,
+    name: 'Pikachu',
+    imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png',
+    types: ['electric'],
+  },
+  {
+    id: 68,
+    name: 'Mac-hamp',
+    imageUrl: 'https://www.shutterstock.com/image-vector/leaf-cannabis-illustration-logo-mascot-260nw-2451081719.jpg',
+    types: ['fighting'],
+  }
 ];
 
 export default function PokemonListScreen() {
