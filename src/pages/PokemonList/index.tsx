@@ -51,6 +51,13 @@ export default function PokemonListScreen() {
   const styles = createStyles(theme);
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList, 'PokemonList'>>();
 
+  function handleLogout() {
+    navigation.reset({
+      index: 0,
+      routes: [{ name: 'Login' }],
+    });
+  }
+
   const renderItem = ({ item }: { item: PokemonListItem }) => (
     <TouchableOpacity 
       style={styles.card} 
