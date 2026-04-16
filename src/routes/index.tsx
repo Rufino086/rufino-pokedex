@@ -3,15 +3,22 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from '../pages/Login';
 import PokemonListScreen from '../pages/PokemonList';
 import PokemonDetailScreen from '../pages/PokemonDetail';
+import PokemonCameraScreen from '../pages/PokemonCamera';
 
 export type RootStackParamList = {
     Login: undefined;
     PokemonList: undefined;
     PokemonDetail: {id: number};
+    PokemonCamera: {id: number};
 }
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
+/**
+ * Componente que define o navegador de pilha da aplicação.
+ * Configura as rotas para Login, PokemonList e PokemonDetail.
+ * Por que é usada: Para gerenciar a navegação entre as telas da aplicação.
+ */
 export default function AppNavigator() {
     return (
         <Stack.Navigator 
@@ -20,6 +27,7 @@ export default function AppNavigator() {
             <Stack.Screen name="Login" component={LoginScreen}/>
             <Stack.Screen name="PokemonList" component={PokemonListScreen}/>
             <Stack.Screen name="PokemonDetail" component={PokemonDetailScreen}/>
+            <Stack.Screen name="PokemonCamera" component={PokemonCameraScreen}/>
         </Stack.Navigator>
     )
 }
